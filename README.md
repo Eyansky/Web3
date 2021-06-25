@@ -1,9 +1,16 @@
 # Web3-Full-Stack-Hiring
 
-Hello! If you're reading this, you applied to a Full Stack Engineering role at Syndicate. This is Syndicate's hiring test for Full Stack engineers. (Note: If you have not applied but stumbled across this repository somehow, you are welcome to check out our [job postings](https://www.notion.so/Syndicate-Protocol-Job-Postings-ad09c123121445339d6dfe0da4e3495e).)
+Hello! If you're reading this, you are definetly checking out the work I have put into this project. To help in your transition, follow the steps below to get up and running with the project. To get you up and running, follow the instructions below to get you started.
 
-When you fork this repository, you should make your fork **private** and share it with [wpapper](https://github.com/wpapper) on Github with an admin role. By forking this repository, you agree to keep the MIT License intact and assign the MIT License to your fork as well.
-
+### Getting Started
+- Clone the repository
+`$ Git clone https://github.com/Eyansky/Web3-Full-Stack-Hiring-private`
+- Install node modules
+`$ npm install`
+- Run the project
+`npm start`
+- Test the solution
+    - Can you be able to input an Ethetheum address and have it converted to any currency of your choice?
 ## Project Description
 
 In this repository, you will create a Web3 integration to look up balances in a smart contract known as Dai. Don't worry if you haven't worked with Web3 before, we'll have plenty of examples and guidance!
