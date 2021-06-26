@@ -2,7 +2,10 @@
 
 Hello! If you're reading this, you are definetly checking out the work I have put into this project. To help in your transition, follow the steps below to get up and running with the project. To get you up and running, follow the instructions below to get you started.
 
-### Getting Started
+### Live Demo
+- You can find the application hosted here: https://unruffled-hodgkin-913465.netlify.app/ 
+
+### Getting Started 
 - Clone the repository
 `$ Git clone https://github.com/Eyansky/Web3-Full-Stack-Hiring-private`
 - Install node modules
