@@ -1,9 +1,14 @@
 import Web3 from "web3";
 import { AbiItem } from "web3-utils";
-import daiABI from "../abi/dai.json";
+import daiABI from "../abi/dai";
 import erc20 from "../abi/usdc.json";
 
-const web3 = new Web3(Web3.givenProvider);
+const PROVIDER =
+  process.env.PROVIDER ||
+  "https://mainnet.infura.io/v3/4b63b3897126482e8987b0f25ab9f1a4";
+
+const web3 = new Web3(new Web3.providers.HttpProvider(PROVIDER));
+
 const daiContractAddress = "0x6b175474e89094c44da98b954eedeac495271d0f";
 const daiContract = new web3.eth.Contract(
   daiABI as AbiItem[],
@@ -28,6 +33,7 @@ const getDaiBalance = async (address: string) => {
         };
       });
   } catch (err) {
+    console.log("err is: ", err);
     return {
       status: false,
       data: err,

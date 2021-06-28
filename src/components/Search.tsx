@@ -44,15 +44,7 @@ const Search: React.FC<Props> = (props: Props) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <div className="relative w-full">
-            <div className="absolute inset-y-0 right-0 flex items-center px-2">
-              <button
-                className="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-sm text-gray-600 font-mono cursor-pointer"
-                type="submit"
-                disabled={loading}
-              >
-                {loading ? "Loading... " : "Check Balance"}
-              </button>
-            </div>
+            
             <input
               className="appearance-none border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono"
               {...register("address", {
@@ -61,7 +53,16 @@ const Search: React.FC<Props> = (props: Props) => {
               })}
               autoComplete="off"
             />
-          </div>
+          </div> 
+          <div className=" py-3 px-30 items-center text-center md:w-auto "  >
+              <button
+                className="bg-gray-300  mx-auto  flex items-center  w-auto text-center hover:bg-gray-400 rounded px-8 py-3  text-gray-600  font-mono cursor-pointer"
+                type="submit"
+                disabled={loading}
+              >
+                {loading ? "Loading... " : "Check Balance"}
+              </button>
+            </div>
         </div>
         <div className="text-red-400">
           {errors.address?.type === "required" && "Address is required"}
