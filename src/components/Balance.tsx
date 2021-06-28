@@ -43,7 +43,11 @@ const Balance: React.FC<Props> = (props: Props) => {
   };
 
   const currencyData = currencies.map(({ currencyName, currencyCode }) => {
-    return <option value={currencyCode}>{currencyName}</option>;
+    return (
+      <option key={currencyCode} value={currencyCode}>
+        {currencyName}
+      </option>
+    );
   });
   return (
     <>
@@ -61,9 +65,7 @@ const Balance: React.FC<Props> = (props: Props) => {
                 className="border-2 rounded w-full py-3 px-3 leading-tight border-gray-300 bg-gray-100 focus:outline-none focus:border-indigo-700 focus:bg-white text-gray-700 pr-16 font-mono"
                 onChange={(e) => currencyConvertion(e.target.value)}
               >
-                <option value="USD" selected>
-                  US Dollar
-                </option>
+                <option value="USD">US Dollar</option>
                 {currencyData}
               </select>
             </div>
